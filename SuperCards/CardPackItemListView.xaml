@@ -1,0 +1,20 @@
+﻿<UserControl
+    x:Class="SuperCards.CardPackItemListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SuperCards"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="125"
+    d:DesignWidth="400" >
+    <Border CornerRadius="2" BorderThickness="1" BorderBrush="White">
+        <Grid Background="White" Height="Auto" Width=" Auto">
+            <TextBlock x:Name="cardPackItemNameDisplay" HorizontalAlignment="Left" VerticalAlignment="Top" Width="Auto" Height="Auto" Text="(Sample) Periodic Table" Foreground="Gray" Margin="9,9,0,0" FontSize="30" />
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="9,30,9,9" Width="Auto" Height="9" Background="gray" >
+                <Rectangle HorizontalAlignment="Left" VerticalAlignment="Stretch" Fill="Red" Width="46"/>
+            </Grid>
+            <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Text="36" Foreground="Gray" Margin="0,9,9,0" FontSize="30"/>
+        </Grid>
+    </Border>
+</UserControl>
