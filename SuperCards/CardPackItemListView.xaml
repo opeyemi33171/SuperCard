@@ -7,14 +7,16 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="125"
-    d:DesignWidth="400" >
+    d:DesignWidth="390" Margin="5,10,5,0">
     <Border CornerRadius="2" BorderThickness="1" BorderBrush="White">
-        <Grid Background="White" Height="Auto" Width=" Auto">
+        <Grid Background="White" Height="Auto" Width="Auto">
             <TextBlock x:Name="cardPackItemNameDisplay" HorizontalAlignment="Left" VerticalAlignment="Top" Width="Auto" Height="Auto" Text="(Sample) Periodic Table" Foreground="Gray" Margin="9,9,0,0" FontSize="30" />
-            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="9,30,9,9" Width="Auto" Height="9" Background="gray" >
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="9,90,9,9" Width="Auto" Height="9" Background="Gray" >
                 <Rectangle HorizontalAlignment="Left" VerticalAlignment="Stretch" Fill="Red" Width="46"/>
             </Grid>
-            <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Text="36" Foreground="Gray" Margin="0,9,9,0" FontSize="30"/>
+            <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Text="36" Foreground="#FFF01919" Margin="0,9,9,0" FontSize="30"/>
+            <TextBlock Text="Memorized :" FontSize="16" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="9,0,0,22"/>
+            <TextBlock Text="26%" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="Gray" Margin="100,0,0,22" FontSize="16" />
         </Grid>
     </Border>
 </UserControl>

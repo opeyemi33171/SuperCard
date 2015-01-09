@@ -11,6 +11,7 @@ namespace SuperCards
         public string name;
         public string numberOfCardsInPack;
         public string percentageOfCardsMemorized;
+        List<Card> ListOFCardsInPack = new List<Card>();
 
     }
 }

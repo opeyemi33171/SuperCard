@@ -85,13 +85,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Card.cs" />
     <Compile Include="CardPack.cs" />
     <Compile Include="CardPackItemListView.xaml.cs">
       <DependentUpon>CardPackItemListView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CardPackOverviewPage.xaml.cs">
+      <DependentUpon>CardPackOverviewPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NavigationContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -113,6 +118,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="CardPackItemListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CardPackOverviewPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

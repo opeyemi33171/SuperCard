@@ -28,7 +28,7 @@ namespace SuperCards
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
         }
-
+        
         /// <summary>
         /// Invoked when this page is about to be displayed in a Frame.
         /// </summary>
@@ -47,19 +47,28 @@ namespace SuperCards
 
         private void addCardPackButton_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            cardPackNamingTool.Visibility = Visibility.Visible;
+            cardPackItemNamer.Visibility = Visibility.Visible;
         }
 
-        private void Button_Tapped(object sender, TappedRoutedEventArgs e)
+        private void saveButton_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            CardPack newCard = new CardPack()
-            {
-                name = cardPackItemNamer.Text
+            CardPack cardPackData = new CardPack(){
+                name=tboNamer.Text
             };
-            cardPackNamingTool.Visibility = Visibility.Collapsed;
-            CardPackItemListView newCardItem = new CardPackItemListView();
-            cardItemHolder.Children.Add(newCardItem);
-
+           CardPackItemListView newCardPack = new CardPackItemListView(tboNamer.Text);
+            newCardPack.Tag = cardPackData.name;
+            newCardPack.Tapped += newCardPack_Tapped;
+            cardItemHolder.Children.Add(newCardPack);
+            cardPackItemNamer.Visibility = Visibility.Collapsed;
         }
+
+        void newCardPack_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            NavigationContext nav = new NavigationContext() { cardPackName = (((CardPackItemListView)sender).Tag).ToString() };
+            Frame.Navigate(typeof(CardPackOverviewPage),nav);
+        }
+
+       
+       
     }
 }

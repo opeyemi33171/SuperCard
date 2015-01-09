@@ -19,9 +19,11 @@ namespace SuperCards
 {
     public sealed partial class CardPackItemListView : UserControl
     {
-        public CardPackItemListView()
+        public CardPackItemListView(string name)
         {
             this.InitializeComponent();
+            this.cardPackItemNameDisplay.Text = name;
         }
+        List<Card> cardsInPack = new List<Card>();
     }
 }

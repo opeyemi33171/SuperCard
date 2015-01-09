@@ -8,19 +8,25 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="Gainsboro">
+    <Grid x:Name="grRoot" Background="Gainsboro">
         <Grid VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="70" Background="DarkGray" >
             <Rectangle HorizontalAlignment="Left" VerticalAlignment="Center" Width="50" Height="50" Margin="10,2,0,2"  Fill="LightBlue" RadiusX="5" RadiusY="5" />
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="65,15,0,2" Width="Auto" Height="Auto" Text="SuperCards" FontSize="30" FontFamily="segoe ui light"/>
             <TextBlock  x:Name="addCardPackButton" HorizontalAlignment="Right" VerticalAlignment="Center" Width="Auto" Height="Auto" Text="+" Margin="0,5,45,2" FontSize="50" FontFamily=" segoe ui light" Tapped="addCardPackButton_Tapped" />
         </Grid>
         <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,80,0,0">
-            <StackPanel x:Name="cardItemHolder" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <StackPanel x:Name="cardItemHolder" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
         </ScrollViewer>
-        <Canvas x:Name="cardPackNamingTool" Background="Gray" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="193" Margin="0,177,0,270" Visibility="Collapsed">
-            <TextBox Canvas.Left="46" Canvas.Top="60" Width="303" Height="39" Text="Card Pack Name" Foreground="Gray"/>
-            <TextBlock x:FieldModifier="Public" x:Name="cardPackItemNamer" Height="31" Canvas.Left="10" TextWrapping="Wrap" Text="Create Card Pack" Canvas.Top="10" Width="200" FontSize="25" Foreground="LightBlue"/>
-            <Button Content="Save" Height="73" Canvas.Left="31" Canvas.Top="119" Width="333" BorderBrush="LightBlue" Background="LightBlue" Foreground="Gray" Tapped="Button_Tapped"/>
-        </Canvas>
+        <Grid x:Name="cardPackItemNamer" VerticalAlignment="Center" Visibility="Collapsed">
+            <Grid.Background>
+                <SolidColorBrush Color="{ThemeResource PhoneChromeColor}"/>
+            </Grid.Background>
+            <TextBlock Text="Create Card Pack" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,2,0,0" Foreground="#FF009EE8" FontSize="34.667"/>
+            <TextBlock Text="CREATE MANUALLY" FontSize="17" Margin="7,40,0,0" Foreground="#FF009EE8"/>
+            <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="5,59,5,0" Height="1" Fill="#FF009EE8"/>
+            <TextBox x:Name="tboNamer"  Margin="5,61,5,0" Height="35" Width="Auto" Text="" FontSize="26.667" MinHeight="36" Padding="0"/>
+            <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="5,98,5,0" Height="1" Fill="#FF009EE8"/>
+            <Button x:FieldModifier="Public" x:Name="saveButton" Content="Save" HorizontalAlignment="Center" VerticalAlignment="Bottom" BorderBrush="#FF009EE8" BorderThickness="1" Margin="0,190,0,10" Tapped="saveButton_Tapped"/>
+        </Grid>
     </Grid>
 </Page>
